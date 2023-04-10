@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Conversor de Medidas</h2>
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="selecionar">
+        <option selected disabled>Selecione a Medida de Conversão</option>
+        <option value="1">Metros x Centimetros</option>
+        <option value="2">Metros x Quilometros</option>
+        <option value="3">Metros x Milímetros</option>
+    </select>
+    <div class="inputBox">
+        <input type="number" class="form-control p-3" aria-label="Text input with dropdown button " placeholder="0"
+            required [(ngModel)]="metro" (keyup)="convert()">
+    </div>
+    <div class="inputResp">
+        <input type="text" readonly class="form-control p-3" aria-label="Text input with dropdown button "
+            placeholder="Resultado:" [(ngModel)]="resultado">
+    </div>
+</div>
